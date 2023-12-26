@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Branch-Hrishi\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj": {}
+    "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Branch-Hrishi\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj": {
+    "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Branch-Hrishi\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj",
+        "projectUniqueName": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj",
         "projectName": "Agri_Connect",
-        "projectPath": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Branch-Hrishi\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj",
+        "projectPath": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Cdac_Project_AgriConnect\\Agri_Connect\\Agri_Connect.csproj",
         "packagesPath": "C:\\Users\\hrishi.nikam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Branch-Hrishi\\Cdac_Project_AgriConnect\\Agri_Connect\\obj\\",
+        "outputPath": "C:\\Users\\hrishi.nikam\\OneDrive\\Desktop\\Project\\Cdac_Project_AgriConnect\\Agri_Connect\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hrishi.nikam\\AppData\\Roaming\\NuGet\\NuGet.Config"

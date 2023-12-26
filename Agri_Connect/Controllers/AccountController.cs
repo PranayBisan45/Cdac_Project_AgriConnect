@@ -4,32 +4,21 @@ using Agri_Connect.Models;
 
 namespace Agri_Connect.Controllers;
 
-public class HomeController : Controller
+public class AccountController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public AccountController(ILogger<HomeController> logger)
     {
         _logger = logger;
     }
 
-    public IActionResult Index()
+    public IActionResult SignIn_SignUp()
     {
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
-    public IActionResult About_Us(){
-        return View();
-    }
-
-    public IActionResult Contact(){
-        return View();
-    }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
