@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar{
+  /* border:1px solid black; */box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+}
+#upperSection{
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+}
+.navImage{
+height: 70px;
+width: 180px;
+}
+.searchDiv{
+  margin-bottom: auto;
+  margin-top: auto;
+  display: flex;
+}
+.searchInput{
+  height: 45px;
+  width: 850px;
+  border:none;
+  border-radius: 7px 0px 0px 7px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.searchButton{
+  height: 45px;
+  width: 50px;
+  background-color: rgb(255,171,65);
+  border: none;
+  border-radius: 0px 7px 7px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+::placeholder{
+  padding: 30px;
+}
+
+.loginButton{
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  margin-left:3px ;
+  font-size: 25px;
+  
+}
+.user{
+  height: 45px;
+}
+.cartButton{
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.buttonContainer{
+  position: relative;
+}
+.quantity{
+  border-radius: 50%;
+  background-color:rgb(116,193,20);
+  width: 30px;
+  height: 30px;
+  position: relative;
+  left: 47px;
+  bottom: 24px;
+}
+
