@@ -13,7 +13,10 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position:sticky;
+  top:0;
+  left: 0;
+  background-color: white;
 }
 #upperSection{
   display: flex;
@@ -35,6 +38,7 @@ width: 180px;
   border:none;
   border-radius: 7px 0px 0px 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  position: relative;
 }
 .searchButton{
   height: 45px;
@@ -74,9 +78,10 @@ width: 180px;
   background-color:rgb(116,193,20);
   width: 30px;
   height: 30px;
-  position: relative;
-  left: 47px;
-  bottom: 24px;
+  position: absolute;
+  left: 17px;
+  bottom: 20px;
+  
 }
 
 /* !BELOW SECTION NAVBAR */
@@ -102,6 +107,6 @@ width: 180px;
   text-decoration: underline;
   transition: 0.5; 
 }
-.link .active{
+.active{
  color: red;  
 }

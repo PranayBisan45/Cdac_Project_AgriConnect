@@ -1,5 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
 #parentContainer{
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
+  background-color: rgb(245,243,237);
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:50px;
+
+}
+.sectionOne{
+  width: 15%;
+  margin-top:50px;
+}
+.sectionTwo,.sectionThree,.sectionFour,.sectionFive{
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+.image{
+  height: 162px;
+  width:208px;
+  margin-bottom: 10px;
+}
+.sectionTwo,.sectionThree{
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+}
+.NavLink{
+  text-decoration: none;
+  color:rgb(105, 99, 99);
+}
+.sectionFive{
+  width: 17%;
+
+}
+.sectionFour{
+  width: 20%;
+}
+.sectionFour h1{
+  margin-bottom: 30px;
+}
+.sectionFour h5{
+  margin-bottom: 6px;
+  color:rgb(105, 99, 99);
+}
+.NavLink:hover{
+  text-decoration: underline black;
 }
