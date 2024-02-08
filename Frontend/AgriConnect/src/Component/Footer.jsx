@@ -1,16 +1,14 @@
 import React from "react";
 import style from "../CSS/Footer.module.css";
 import { NavLink } from "react-router-dom";
+import agriLogo from "../Images/agriLogo.png";
+import Imagelogo from "../Images/Imagelogo.png";
 import { Stack, HStack, Spacer, Image, Text } from "@chakra-ui/react";
 const Footer = () => {
   return (
     <footer id={style.parentContainer}>
       <section className={style.sectionOne}>
-        <img
-          className={style.image}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7IX4u2CC61VqeUvaNEOj6zyXXJPRHbJa4g&usqp=CAU"
-          alt="webLogo"
-        />
+        <img className={style.image} src={Imagelogo} alt="webLogo" />
         <p style={{ color: "rgb(105, 99, 99)" }}>
           {" "}
           The love of gardening is a seed once sown that never dies, but never

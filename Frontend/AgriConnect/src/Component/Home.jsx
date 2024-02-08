@@ -1,68 +1,57 @@
 import React from "react";
+import Slideshow from "./Slideshow";
+import style from "../CSS/Home.module.css";
+import f1 from "../Images/Feature/f1.png";
+import f2 from "../Images/Feature/f2.png";
+import f3 from "../Images/Feature/f3.png";
+import f4 from "../Images/Feature/f4.png";
+import f5 from "../Images/Feature/f5.png";
+import f6 from "../Images/Feature/f6.png";
 
 const Home = () => {
   return (
-    <div style={{ marginTop: "50px" }}>
-      <h1>Home Component</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque deserunt
-        accusantium doloremque dolores. Possimus molestiae nulla velit
-        asperiores dignissimos repellat, voluptatum incidunt maiores corrupti
-        amet sit odit consequatur laudantium quia quaerat ea, in deleniti iusto
-        dolore minus esse quam exercitationem nesciunt. Atque quia dolor earum
-        soluta, aliquam ducimus, accusamus voluptates tenetur perferendis eum
-        pariatur deleniti. Doloribus alias saepe corporis? Modi ipsa tempore
-        similique reiciendis id aspernatur. Debitis animi quae itaque magnam?
-        Maiores dolore sapiente magnam repellat eaque culpa nesciunt laboriosam,
-        ea alias explicabo ad, labore officia tempore similique adipisci! Harum
-        ullam odit obcaecati labore exercitationem facere similique cupiditate
-        voluptas officia vero impedit quisquam eligendi esse debitis, dolorum
-        voluptates velit fuga qui doloribus adipisci delectus eveniet quod sit.
-        Assumenda enim, quidem eveniet laborum veritatis distinctio rem
-        corporis, adipisci rerum ipsa fuga placeat magni, illum soluta voluptas
-        delectus! Error dolor eum nisi nam porro velit veritatis. Autem modi
-        officia, aut, facere veniam asperiores repellat et nobis, ut repudiandae
-        impedit saepe! Fugit repudiandae eum dolor delectus! Placeat dignissimos
-        illum ea minima commodi iure debitis officia, porro corrupti hic quaerat
-        dolor voluptate, quod similique enim vitae saepe corporis voluptatem
-        quae veritatis doloremque sed. Cumque atque doloribus rem et harum
-        recusandae commodi hic vero natus. Harum autem fuga obcaecati adipisci
-        a? Exercitationem magni natus magnam delectus sequi iusto, optio non
-        voluptatum itaque quibusdam autem dolores recusandae, blanditiis iste
-        culpa neque nesciunt voluptates a temporibus. Nostrum cum est
-        exercitationem similique officia minus autem, ex soluta vero facere
-        eligendi aliquam consequatur quaerat? Assumenda ipsam, laudantium
-        praesentium accusamus odit quae, expedita dolores dolore culpa harum
-        mollitia nobis! Voluptatem necessitatibus tenetur nisi libero culpa hic
-        molestias. Cumque deserunt debitis porro repellendus non adipisci.
-        Aliquid numquam ullam voluptatem voluptatibus ducimus, vitae amet
-        inventore, eos voluptas repudiandae illum! Aliquid, voluptatibus!
-        Molestiae inventore ad numquam veniam reiciendis culpa, id laborum
-        mollitia eos fugit rerum odit voluptatibus quo asperiores aut,
-        cupiditate corrupti officia dicta explicabo cum laudantium sint aliquam
-        similique soluta. Quidem aliquam unde illum provident possimus,
-        voluptate consectetur nesciunt. Ipsa, atque odit et magni
-        exercitationem, nostrum doloremque quidem tempore culpa sed, debitis
-        minima qui autem nulla fuga? Eum impedit aspernatur numquam
-        exercitationem nihil dolores ratione possimus. Repellat impedit
-        laboriosam, error tempore, ipsam obcaecati necessitatibus nulla dolore
-        eaque sapiente, est qui odit nemo accusantium libero. Delectus
-        blanditiis ducimus aut iure expedita excepturi, eaque sunt animi
-        dignissimos assumenda. Nisi voluptatum, amet iure corrupti quidem rerum
-        deleniti suscipit, deserunt dolores inventore aliquid ea voluptatibus
-        libero reprehenderit facilis ipsum, illo in placeat aperiam velit
-        voluptate sunt ullam vero molestias. Consequuntur, iste? Fugiat
-        laudantium blanditiis fugit a repellat. Reprehenderit neque tempora
-        atque quod pariatur placeat voluptas nostrum autem, facere repellendus
-        magni explicabo nesciunt unde esse exercitationem commodi accusantium
-        repellat voluptatibus. Veniam beatae deserunt nam eveniet eaque itaque
-        nesciunt iure esse, aut natus et optio quaerat cum at quam quia
-        asperiores fugit labore maiores nisi voluptates. Ex dolore minima
-        ducimus alias error aut perferendis distinctio possimus hic nam ea
-        dolorem, consectetur maiores expedita earum praesentium ipsum assumenda
-        eaque molestias totam aperiam! Ipsam, nobis quidem inventore quam sed
-        id?\
-      </p>
+    <div style={{ marginTop: "0px" }}>
+      <Slideshow />
+      {/* Features Section */}
+      <div>
+        {" "}
+        <h2 className={style.sectionHeading}>What Sets Us Apart !</h2>
+        <section id={style.featuresParent}>
+          <div className={style.featureBox}>
+            <img src={f1} alt="f1-img" />
+            <h5>Free Shipping</h5>
+          </div>
+          <div className={style.featureBox}>
+            <img src={f2} alt="f2-img" />
+            <h5>Online Order</h5>
+          </div>
+          <div className={style.featureBox}>
+            <img
+              src="https://kumaunplants.com/cdn/shop/files/high_quality-01.svg?v=1677842047&width=710"
+              alt="f3-img"
+            />
+            <h5>Quality Assurance</h5>
+          </div>
+          <div className={style.featureBox}>
+            <img
+              src="https://kumaunplants.com/cdn/shop/files/price_a2651f3a-329f-4182-898d-f61b90581a57.svg?v=1677903733&width=710"
+              alt="f4-img"
+            />
+            <h5>Best Price</h5>
+          </div>
+          <div className={style.featureBox}>
+            <img
+              src="https://kumaunplants.com/cdn/shop/files/packed_15bb90be-3837-42f4-9820-5b4d996eb655.svg?v=1677568686&width=710"
+              alt="f5-img"
+            />
+            <h5>Secured Packaging</h5>
+          </div>
+          <div className={style.featureBox}>
+            <img src={f6} alt="f6-img" />
+            <h5>24/7 Support</h5>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

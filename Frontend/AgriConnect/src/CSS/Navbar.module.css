@@ -13,10 +13,12 @@
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   display: flex;
   flex-direction: column;
+  z-index: 999;
   position:sticky;
   top:0;
   left: 0;
   background-color: white;
+  margin-bottom: 0px;
 }
 #upperSection{
   display: flex;
@@ -25,7 +27,7 @@
 }
 .navImage{
 height: 70px;
-width: 180px;
+width: 212px;
 }
 .searchDiv{
   margin-bottom: auto;

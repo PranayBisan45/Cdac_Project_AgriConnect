@@ -4,17 +4,14 @@ import { FaSearch } from "react-icons/fa";
 import { CiUser } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
+import Imagelogo from "../Images/Imagelogo.png";
 
 const Navbar = () => {
   return (
     <nav id={style.navbar}>
       <section id={style.upperSection}>
-        {/* <img src="AgriConnect-logos.jpeg" alt="webLogo" /> */}
-        <img
-          className={style.navImage}
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7IX4u2CC61VqeUvaNEOj6zyXXJPRHbJa4g&usqp=CAU"
-          alt="webLogo"
-        />
+        {/* <img src=""https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR7IX4u2CC61VqeUvaNEOj6zyXXJPRHbJa4g&usqp=CAU"" alt="webLogo" /> */}
+        <img className={style.navImage} src={Imagelogo} alt="webLogo" />
 
         <div className={style.searchDiv}>
           <input
