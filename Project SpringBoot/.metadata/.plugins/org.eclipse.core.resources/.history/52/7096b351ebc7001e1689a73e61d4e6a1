@@ -1,0 +1,17 @@
+package com.demo.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.demo.model.Plant_Food;
+
+public interface PlantFoodDao {
+	
+	@Autowired
+	private JdbcTemplate jdbcTemplate;
+
+	List<Plant_Food> getAllProducts();
+
+}
