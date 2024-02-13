@@ -86,7 +86,7 @@ public class Plant_Food_Controller {
 	}
 	
 	@GetMapping("/PlantFood/load/by_price")
-	public ResponseEntity<List<Plant_Food>> getLoadedPlantsFoodPrice(@RequestParam int offset,@RequestParam int limit, @RequestParam double from, @RequestParam double to){
+	public ResponseEntity<List<Plant_Food>> getLoadedPlantsFoodPrice11(@RequestParam int offset,@RequestParam int limit, @RequestParam double from, @RequestParam double to){
 		List<Plant_Food> list = pfservice.getAllPlantsFoodLoadedPrice(offset, limit, from, to);
 		return ResponseEntity.ok(list);
 	}
@@ -133,7 +133,7 @@ public class Plant_Food_Controller {
 	}
 	
 	@GetMapping("/PlantFood/load/by_rating")
-	public ResponseEntity<List<Plant_Food>> getLoadedPlantsFoodRating(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating) {
+	public ResponseEntity<List<Plant_Food>> getLoadedPlantsFoodRating1(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating) {
 		List<Plant_Food> pp2list = pfservice.getLoadedPlantsFoodRating(offset, limit, rating);
 		return ResponseEntity.ok(pp2list);
 	}
@@ -166,17 +166,17 @@ public class Plant_Food_Controller {
 		return ResponseEntity.ok(pp1list);
 	}
 	
-	@GetMapping("/PlantFood/load/by_rating")
-	public ResponseEntity<List<Plant_Food>> getLoadedPlantFoods1(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating) {
-		List<Plant_Food> pp2list = pfservice.getAllPlantFoodsLoadedRating(offset, limit, rating);
-		return ResponseEntity.ok(pp2list);
-	} 
+//	@GetMapping("/PlantFood/load/by_rating")
+//	public ResponseEntity<List<Plant_Food>> getLoadedPlantFoods1(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating) {
+//		List<Plant_Food> pp2list = pfservice.getAllPlantFoodsLoadedRating(offset, limit, rating);
+//		return ResponseEntity.ok(pp2list);
+//	} 
 	
-	@GetMapping("/PlantFood/load/by_price")
-	public ResponseEntity<List<Plant_Food>> getLoadedPotPlanters2(@RequestParam int offset,@RequestParam int limit, @RequestParam double from, @RequestParam double to){
-		List<Plant_Food> pp3list = pfservice.getAllPlantFoodsLoadedPrice(offset, limit, from, to);
-		return ResponseEntity.ok(pp3list);
-	}
+//	@GetMapping("/PlantFood/load/by_price")
+//	public ResponseEntity<List<Plant_Food>> getLoadedPlant_food2(@RequestParam int offset,@RequestParam int limit, @RequestParam double from, @RequestParam double to){
+//		List<Plant_Food> pp3list = pfservice.getAllPlantFoodsLoadedPrice(offset, limit, from, to);
+//		return ResponseEntity.ok(pp3list);
+//	}
 	
 	@GetMapping("/PlantFood/load/by_rating_by_price")
 	public ResponseEntity<List<Plant_Food>> getLoadedPlantFoods3(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating, @RequestParam double from, @RequestParam double to){

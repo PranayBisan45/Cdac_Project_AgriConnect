@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+#displayPoster{
+  background-image: url('../Images/Slideimg1.webp');
+  height:560px;
+  width:100%;
+  /* background-position: top 25% ; */
+  background-size: cover;
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+#displayPoster button{
+  background-image: url('../Images/button.png');
+  background-color:transparent;
+  color: #088178;
+  border: none;
+  padding: 14px 80px 14px 65px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 20px;
+  position: absolute;
+  bottom: 120px;
+  right: 230px;
+}
+#featuresParent{
+  /* border: 1px solid black; */
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap:20px;
+}
+.featureBox{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  text-align: center;
+  padding: 50px 0px;
+  border-radius: 10px;
+  border:1px solid black;
+  margin-bottom: 20px;
+  height: 220px;
+}
+.featureBox h5{
+  color: #088178;
+  margin-top: 20px;
+  background-color:bisque;
+  padding: 9px 8px 6px 8px;
+}
+.sectionHeading{
+  text-align: center;
+  margin:20px  0px;
+}
+.featureBox img{
+  width: fit-content;
+  height: 85px;
+}
