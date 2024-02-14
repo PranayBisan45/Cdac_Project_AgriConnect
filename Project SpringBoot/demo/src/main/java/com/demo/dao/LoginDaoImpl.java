@@ -37,7 +37,7 @@ public class LoginDaoImpl implements LoginDao {
 
     @Override
     public Boolean Validate(String uname, String upass) {
-        String query = "SELECT * FROM consumer WHERE userid=? AND user_passsword=?";
+        String query = "SELECT * FROM consumer WHERE userid=? AND user_password=?";
         
         try {
             Login loggedInUser = jdbcTemplate.queryForObject(

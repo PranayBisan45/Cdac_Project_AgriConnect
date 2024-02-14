@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.service.LoginService;
 
+import jakarta.mail.Session;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 @RestController
 @CrossOrigin(value="*")
 public class Login_Controller {
@@ -21,9 +28,11 @@ public class Login_Controller {
 	private LoginService lservice;
 	
 	@GetMapping("/Login")
-	public ResponseEntity <Boolean> login(@RequestParam String Uname,@RequestParam String Upass) {
+	public ResponseEntity <Boolean> login(@RequestParam String Uname,@RequestParam String Upass,HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Boolean flag= lservice.getValidate(Uname,Upass);
 		if(flag) {
+			HttpSession session=request.getSession();
+			session.setAttribute("uid", Uname);
 		 return ResponseEntity.ok(flag);
 		}
 		
