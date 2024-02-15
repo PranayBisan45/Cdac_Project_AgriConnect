@@ -1,11 +1,13 @@
 package com.demo.service;
 
-import com.demo.model.Login;
 
 public interface LoginService {
 
 	Boolean getValidate(String uname, String upass);
 
 	String getOtpForgotPassword(String email, String userID);
+
+	Boolean newPass(String whatsApp_Number, String oTP, String new_Password);
+
 
 }

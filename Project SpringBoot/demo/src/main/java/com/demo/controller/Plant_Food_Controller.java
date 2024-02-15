@@ -1,6 +1,5 @@
 package com.demo.controller;
 
-import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -166,18 +165,6 @@ public class Plant_Food_Controller {
 		List<Plant_Food> pp1list = pfservice.getAllPlantFoodLoaded(offset,limit);
 		return ResponseEntity.ok(pp1list);
 	}
-	
-//	@GetMapping("/PlantFood/load/by_rating")
-//	public ResponseEntity<List<Plant_Food>> getLoadedPlantFoods1(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating) {
-//		List<Plant_Food> pp2list = pfservice.getAllPlantFoodsLoadedRating(offset, limit, rating);
-//		return ResponseEntity.ok(pp2list);
-//	} 
-	
-//	@GetMapping("/PlantFood/load/by_price")
-//	public ResponseEntity<List<Plant_Food>> getLoadedPlant_food2(@RequestParam int offset,@RequestParam int limit, @RequestParam double from, @RequestParam double to){
-//		List<Plant_Food> pp3list = pfservice.getAllPlantFoodsLoadedPrice(offset, limit, from, to);
-//		return ResponseEntity.ok(pp3list);
-//	}
 	
 	@GetMapping("/PlantFood/load/by_rating_by_price")
 	public ResponseEntity<List<Plant_Food>> getLoadedPlantFoods3(@RequestParam int offset,@RequestParam int limit, @RequestParam double rating, @RequestParam double from, @RequestParam double to){

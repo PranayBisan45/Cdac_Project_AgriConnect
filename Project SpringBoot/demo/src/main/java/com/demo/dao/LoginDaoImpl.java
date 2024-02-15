@@ -1,8 +1,5 @@
 package com.demo.dao;
 
-import java.sql.Types;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.sql.DataSource;
 
@@ -10,18 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.SqlOutParameter;
-import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
-import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Repository;
 
 import com.demo.model.Login;
-import com.demo.model.Plant_Food;
 
 @Repository
 public class LoginDaoImpl implements LoginDao {
@@ -40,7 +33,8 @@ public class LoginDaoImpl implements LoginDao {
         String query = "SELECT * FROM consumer WHERE userid=? AND user_password=?";
         
         try {
-            Login loggedInUser = jdbcTemplate.queryForObject(
+            @SuppressWarnings("deprecation")
+			Login loggedInUser = jdbcTemplate.queryForObject(
                 query, new Object[] { uname, upass }, BeanPropertyRowMapper.newInstance(Login.class));
             
             return loggedInUser != null;
@@ -48,6 +42,8 @@ public class LoginDaoImpl implements LoginDao {
             return false;
         }
     }
+    
+    String otp;
 
     @Override
     public String generateOtpForgotP(String email, String userID) {
@@ -57,7 +53,7 @@ public class LoginDaoImpl implements LoginDao {
             .addValue("email", email)
             .addValue("usid", userID);
 
-        String otp = jdbcCall.executeFunction(String.class, in);
+         otp = jdbcCall.executeFunction(String.class, in);
 
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("hrishi.ns25@gmail.com");
@@ -69,4 +65,16 @@ public class LoginDaoImpl implements LoginDao {
 
         return "success";
     }
+
+
+	@Override
+	public Boolean newPass(String whatsApp_Number, String oTP, String new_Password) {
+		if(oTP==otp) {
+			
+			String str="update consumer set USER_PASSWORD=? where WhatsApp_Number=?";
+			jdbcTemplate.update(str,new Object[] {new_Password,whatsApp_Number});
+			return true;
+		}
+		return false;
+	}
 }

@@ -39,7 +39,6 @@ public class PlantFoodDaoImpl implements PlantFoodDao {
 	@Override
 	public Plant_Food findById(String pfid) {
 		String query = "select * from plant_food where pfid=?";
-		Plant_Food pfood = new Plant_Food();
 		try {
 		    return jdbcTemplate.queryForObject(query,new Object[] {pfid},BeanPropertyRowMapper.newInstance(Plant_Food.class));
 		}catch(EmptyResultDataAccessException e) {

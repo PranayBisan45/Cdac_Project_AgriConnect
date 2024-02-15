@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.demo.dao.LoginDao;
-import com.demo.model.Login;
 
 @Service
 public class LoginServiceImpl implements LoginService{
@@ -20,6 +19,11 @@ public class LoginServiceImpl implements LoginService{
 	@Override
 	public String getOtpForgotPassword(String email, String userID) {
 		return ldao.generateOtpForgotP(email,userID);
+	}
+
+	@Override
+	public Boolean newPass(String whatsApp_Number, String oTP, String new_Password) {
+		return ldao.newPass(whatsApp_Number,oTP,new_Password);
 	}
 
 }
