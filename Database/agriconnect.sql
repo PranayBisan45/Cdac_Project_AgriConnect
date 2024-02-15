@@ -77,7 +77,6 @@ END$$
 DELIMITER ;
 
 
-
 drop table if exists Plants;
 CREATE TABLE PLANTS (
     PID Varchar(45) PRIMARY KEY,
@@ -102,6 +101,9 @@ BEGIN
 END$$
 DELIMITER ;
 
+
+
+
 drop table if exists CONSUMER; 
 CREATE TABLE consumer (
     USERID VARCHAR(255) PRIMARY KEY,
@@ -112,12 +114,18 @@ CREATE TABLE consumer (
     PINCODE VARCHAR(50),
     STATE VARCHAR(50),
     GENDER VARCHAR(50),
+    WhatsApp_Number varchar(50),
     USER_PASSWORD VARCHAR(50)
 );
 
+
+
+-- call Generate_custom_user_id_CO('hrishi','nikam','hrishinikam1729@gmail.com','pune','422003','maharashtra','male','9373352724','Hrishi@17294s');
+ 
+
 drop procedure if exists Generate_custom_user_id_CO;
 delimiter $
-create procedure Generate_custom_user_id_CO(USERID VARCHAR(255),
+create procedure Generate_custom_user_id_CO(
     FIRSTNAME VARCHAR(255),
     LASTNAME VARCHAR(255),
     EMAILID VARCHAR(255),
@@ -125,6 +133,7 @@ create procedure Generate_custom_user_id_CO(USERID VARCHAR(255),
     PINCODE VARCHAR(50),
     STATE VARCHAR(50),
     GENDER VARCHAR(50),
+    WhatsApp_Number varchar(50),
     USER_PASSWORD VARCHAR(50))
 Begin 
 DECLARE U_ID VARCHAR(255);
@@ -137,6 +146,7 @@ insert into CONSUMER values(U_ID,
     PINCODE,
     STATE,
     GENDER,
+    WhatsApp_Number,
     USER_PASSWORD);
 end $
 delimiter ;
@@ -145,11 +155,11 @@ delimiter ;
 drop function if exists Forgot_Password_Check_SEND_OTP;
 delimiter $
 
-create function Forgot_Password_Check_SEND_OTP(email varchar(255), usid varchar(255)) returns varchar(255)
+create function Forgot_Password_Check_SEND_OTP(Phone varchar(255), usid varchar(255)) returns varchar(255)
 DETERMINISTIC
 begin
 declare x bool;
-select true into x from CONSUMER where emailid = email and userid = usid;
+select true into x from CONSUMER where WhatsApp_Number = Phone and userid = usid;
 if (x = true) then
 return floor(rand() * 1000000);
 else
@@ -188,7 +198,7 @@ DELIMITER ;
 DROP TABLE IF EXISTS PLASTIC_POTS;
 CREATE TABLE PLASTIC_POTS(
 PPOID VARCHAR(255) PRIMARY KEY, 
-PPOTITLE VARCHAR(255), 
+PPOTITLE VARCHAR(255),
 PPODESCRIPTION TEXT, 
 PPODIMENSION JSON,
 PPO_RATING double CHECK (PPO_RATING >0 AND PPO_RATING<=5),
