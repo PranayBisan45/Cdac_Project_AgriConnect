@@ -1,0 +1,24 @@
+package com.demo.dao;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.demo.model.Plant_Food;
+@Repository
+public interface PlantFoodDao extends JpaRepository <Plant_Food,String> {
+	
+	@Override
+	public List<Plant_Food> getAllProducts() {
+		return null;
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,5 +1,0 @@
-package com.demo.Service;
-
-public class LoginServiceImpl implements LoginService {
-
-}

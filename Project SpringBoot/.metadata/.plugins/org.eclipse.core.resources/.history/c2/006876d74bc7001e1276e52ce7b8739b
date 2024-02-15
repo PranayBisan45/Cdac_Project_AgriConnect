@@ -1,0 +1,90 @@
+package com.demo.model;
+
+import java.util.Arrays;
+
+import org.hibernate.annotations.Type;
+
+public class Plant_Food {
+	private String PFID;
+	private String PFTitle;
+	private String PFDescription;
+	@Type(type="json")
+	private String[] PFWeight;
+	private double PFRating;
+	private double [] PFPrice;
+	private int PFSTOCKAVAILABILITY;
+	private String [] PFImages;
+	
+	public Plant_Food() {
+		super();
+	}
+	
+	public Plant_Food(String pFID, String pFTitle, String pFDescription, String[] pFWeight, double pFRating,
+			double[] pFPrice, int pFSTOCKAVAILABILITY, String[] pFImages) {
+		super();
+		PFID = pFID;
+		PFTitle = pFTitle;
+		PFDescription = pFDescription;
+		PFWeight = pFWeight;
+		PFRating = pFRating;
+		PFPrice = pFPrice;
+		PFSTOCKAVAILABILITY = pFSTOCKAVAILABILITY;
+		PFImages = pFImages;
+	}
+	
+	public String getPFID() {
+		return PFID;
+	}
+	public void setPFID(String pFID) {
+		PFID = pFID;
+	}
+	public String getPFTitle() {
+		return PFTitle;
+	}
+	public void setPFTitle(String pFTitle) {
+		PFTitle = pFTitle;
+	}
+	public String getPFDescription() {
+		return PFDescription;
+	}
+	public void setPFDescription(String pFDescription) {
+		PFDescription = pFDescription;
+	}
+	public String[] getPFWeight() {
+		return PFWeight;
+	}
+	public void setPFWeight(String[] pFWeight) {
+		PFWeight = pFWeight;
+	}
+	public double getPFRating() {
+		return PFRating;
+	}
+	public void setPFRating(double pFRating) {
+		PFRating = pFRating;
+	}
+	public double[] getPFPrice() {
+		return PFPrice;
+	}
+	public void setPFPrice(double[] pFPrice) {
+		PFPrice = pFPrice;
+	}
+	public int isPFSTOCKAVAILABILITY() {
+		return PFSTOCKAVAILABILITY;
+	}
+	public void setPFSTOCKAVAILABILITY(int pFSTOCKAVAILABILITY) {
+		PFSTOCKAVAILABILITY = pFSTOCKAVAILABILITY;
+	}
+	public String[] getPFImages() {
+		return PFImages;
+	}
+	public void setPFImages(String[] pFImages) {
+		PFImages = pFImages;
+	}
+	
+	@Override
+	public String toString() {
+		return "Plant_Food [PFID=" + PFID + ", PFTitle=" + PFTitle + ", PFDescription=" + PFDescription + ", PFWeight="
+				+ Arrays.toString(PFWeight) + ", PFRating=" + PFRating + ", PFPrice=" + Arrays.toString(PFPrice)
+				+ ", PFSTOCKAVAILABILITY=" + PFSTOCKAVAILABILITY + ", PFImages=" + Arrays.toString(PFImages) + "]";
+	}
+}

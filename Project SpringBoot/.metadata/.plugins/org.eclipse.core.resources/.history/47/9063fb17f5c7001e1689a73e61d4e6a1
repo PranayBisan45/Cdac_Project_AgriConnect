@@ -1,0 +1,14 @@
+package com.demo.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.demo.model.Plant_Food;
+
+public interface PlantFoodDao {
+	
+	List<Plant_Food> getAllProducts();
+
+	Optional<Plant_Food> findById(int pid);
+
+}

@@ -1,0 +1,22 @@
+package com.demo.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.model.Plant_Food;
+import com.example.demo.PlantFoodDao;
+
+@Service
+public class PlantFoodServiceImpl implements PlantFoodService {
+	
+	@Autowired
+	private PlantFoodDao pfdao;
+
+	@Override
+	public <Plant_Food>ject getAllProducts() {
+		return pfdao.getAllProducts();
+	}
+
+}

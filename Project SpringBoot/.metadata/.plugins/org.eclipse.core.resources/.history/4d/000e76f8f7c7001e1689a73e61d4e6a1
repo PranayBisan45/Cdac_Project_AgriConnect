@@ -1,0 +1,38 @@
+package com.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.demo.model.Plant_Food;
+import com.demo.service.PlantFoodService;
+
+@RestController
+@CrossOrigin(value="*")
+public class Plant_Food_Controller {
+	@Autowired
+	private PlantFoodService pfservice;
+	
+	@GetMapping("/Products")
+	public ResponseEntity<List<Plant_Food>> getAllProducts() {
+		List<Plant_Food> plist= pfservice.getAllProducts();
+		 return ResponseEntity.ok(plist);
+	}
+	
+	
+	@GetMapping("/products/{pid}")
+	public ResponseEntity<Plant_Food> getById(@PathVariable int pid){
+		Plant_Food p=pfservice.getById(pid);
+		if (p!=null)
+			return ResponseEntity.ok(p);
+		else
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+	}
+}

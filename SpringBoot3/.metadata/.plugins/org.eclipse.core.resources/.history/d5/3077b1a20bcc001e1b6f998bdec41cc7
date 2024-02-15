@@ -1,9 +1,0 @@
-package com.demo.Service;
-
-import org.springframework.http.ResponseEntity;
-
-public interface ProfileService {
-
-	ResponseEntity<String> editAddress(String newAddress, String uid);
-
-}
