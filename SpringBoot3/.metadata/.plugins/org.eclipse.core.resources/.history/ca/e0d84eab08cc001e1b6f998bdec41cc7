@@ -1,0 +1,13 @@
+package com.demo.Service;
+
+
+public interface LoginServiceYesorNo {
+
+	Boolean getValidate(String uname, String upass);
+
+	String getOtpForgotPassword(String email, String userID);
+
+	Boolean newPass(String whatsApp_Number, String oTP, String new_Password);
+
+
+}
