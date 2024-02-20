@@ -29,4 +29,9 @@ public class Add_TO_Cart_Service_Impl implements Add_TO_Cart_Service {
 		return Adao.getAll();
 	}
 
+	@Override
+	public Boolean changeQty(String pid,int qty) {
+		return Adao.changeQty(pid,qty);
+	}
+
 }

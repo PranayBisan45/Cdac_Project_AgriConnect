@@ -12,4 +12,6 @@ public interface Add_TO_Cart_Dao {
 
 	List<Products> getAll();
 
+	Boolean changeQty(String pid, int qty);
+
 }

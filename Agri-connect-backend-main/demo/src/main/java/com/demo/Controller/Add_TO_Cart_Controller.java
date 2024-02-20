@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -59,4 +60,14 @@ public class Add_TO_Cart_Controller {
 		return ResponseEntity.ok(plist);
 	}
 	
+	@PutMapping("/ChangeQuantity/{pid}/{qty}")
+	public ResponseEntity <Boolean> changeQty(@PathVariable String pid,@PathVariable int qty) {
+		Boolean flag=pservice.changeQty(pid,qty);
+		if(flag) {
+			return ResponseEntity.ok(true);
+		}
+		else {
+			return ResponseEntity.ok(false);
+		}
+	}
 }

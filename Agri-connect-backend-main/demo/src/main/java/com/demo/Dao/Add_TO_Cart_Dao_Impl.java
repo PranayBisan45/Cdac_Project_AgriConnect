@@ -54,5 +54,16 @@ public class Add_TO_Cart_Dao_Impl implements Add_TO_Cart_Dao {
 		
 		return plist;
 	}
+
+	@Override
+	public Boolean changeQty(String pid,int qty) {
+		String query="update AddToCart set qty=? where pid=?";
+		int flag=jdbcTemplate.update(query,qty,pid);
+		if(flag!=0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 		
