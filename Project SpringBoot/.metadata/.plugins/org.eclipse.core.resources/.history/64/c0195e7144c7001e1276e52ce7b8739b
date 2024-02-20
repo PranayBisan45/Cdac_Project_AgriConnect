@@ -1,4 +1,0 @@
-jdbc.driverclass=com.mysql.cj.jdbc.Driver
-jdbc.url=jdbc:mysql://localhost:3306/spring
-jdbc.uname=root
-jdbc.pass=root123
