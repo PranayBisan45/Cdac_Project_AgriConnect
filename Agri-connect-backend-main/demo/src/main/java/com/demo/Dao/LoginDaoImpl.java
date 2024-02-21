@@ -12,13 +12,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Repository;
 
 import com.demo.Model.Login;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
 
 
 @Repository
@@ -54,13 +50,21 @@ public class LoginDaoImpl implements LoginDao {
             return false;
         }
     }
+    
+    
 
     @Override
-    public String generateOtpForgotP(String Phone, String userID) {
+    public String generateOtpForgotP(String phoneNo, String userID) {
+    	
+            boolean phoneExists = checkIfExists("WhatsApp_Number", phoneNo);
+            boolean userIDExists = checkIfExists("USERID", userID);
+
+            if (phoneExists && userIDExists) {         
+            
         SimpleJdbcCall jdbcCall = new SimpleJdbcCall(datasource).withFunctionName("Forgot_Password_Check_SEND_OTP");
 
         SqlParameterSource in = new MapSqlParameterSource()
-            .addValue("Phone", Phone)
+            .addValue("Phone", phoneNo)
             .addValue("usid", userID);
 
         String otp = jdbcCall.executeFunction(String.class, in);
@@ -70,7 +74,12 @@ public class LoginDaoImpl implements LoginDao {
 
         otpU = otp;
         return otp;
+        }
+            else {
+            	return "UserId or WhatsappNo not found"; 
+            }
     }
+    
 
 	@Override
 	public Boolean verifyOtp(String otp) {
@@ -85,19 +94,23 @@ public class LoginDaoImpl implements LoginDao {
 	public Boolean updatePassword(String newPassword,String uid) {
 	    try {
 	    	
-	        // SQL query to update password for a specific condition, for example, based on user session or ID
-	    	String sql = "UPDATE consumer SET user_password = ? WHERE USERID = ?";// Specify your condition here
+	    	String sql = "UPDATE consumer SET user_password = ? WHERE USERID = ?";
 	        
-	        // Execute the update query with the new password
 	        int rowsAffected = jdbcTemplate.update(sql, newPassword,uid);
 	        
-	        // If the number of rows affected is greater than 0, password update was successful
 	        return rowsAffected > 0;
 	    } catch (Exception e) {
 	        e.printStackTrace();
-	        return false; // Password update failed
+	        return false;
 	    }
 	}
+	
+	private boolean checkIfExists(String columnName, String value) {
+        String query = "SELECT COUNT(*) FROM consumer WHERE " + columnName + " = ?";
+        int count = jdbcTemplate.queryForObject(query, Integer.class, value);
+        return count > 0;
+    }
+
 
 	@Override
 	public void savelogin(String useriD) {

@@ -34,17 +34,14 @@ public class ORDER_CONTROLLER {
 	                                          @RequestParam String subtotal,@RequestParam String token,
 	                                          HttpServletRequest request,
 	                                          HttpServletResponse response) {
-	    // Retrieve user ID from session
 	    HttpSession session = request.getSession();
 	    String uid = (String) session.getAttribute("UserID");
 
-	    // Validate input parameters
 	    if (productIDs == null || unitPrices == null || unitQuantities == null || subtotal == null ||
 	        productIDs.isEmpty() || unitPrices.isEmpty() || unitQuantities.isEmpty()) {
 	        return ResponseEntity.badRequest().body("Missing or empty parameters");
 	    }
 
-	    // Insert the order
 	    boolean success = oservice.insertorder(productIDs, unitPrices, unitQuantities, subtotal, uid,token);
 
 	    if (success) {
