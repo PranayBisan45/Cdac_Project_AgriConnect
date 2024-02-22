@@ -1,0 +1,34 @@
+.shipping-policy {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.shipping-policy p {
+    margin-bottom: 10px;
+}
+
+.shipping-policy h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.shipping-policy strong {
+    font-weight: bold;
+}
+
+.shipping-policy em {
+    font-style: italic;
+}
+
+.shipping-policy ul {
+    margin-bottom: 10px;
+}
+
+.shipping-policy ul li {
+    margin-left: 20px;
+}

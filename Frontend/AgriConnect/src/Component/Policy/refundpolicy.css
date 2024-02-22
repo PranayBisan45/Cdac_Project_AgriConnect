@@ -1,0 +1,28 @@
+.refund-policy {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    padding: 20px;
+    /* Adjust padding for spacing */
+    margin: 20px auto;
+    /* Center the block */
+    max-width: 800px;
+}
+
+.refund-policy p {
+    margin-bottom: 10px;
+}
+
+.refund-policy h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.refund-policy strong {
+    font-weight: bold;
+}
+
+.refund-policy em {
+    font-style: italic;
+}

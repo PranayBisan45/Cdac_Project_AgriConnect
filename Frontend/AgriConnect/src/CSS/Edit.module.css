@@ -1,0 +1,64 @@
+/* .ParentAddress{
+  position: relative;
+  width: 100%;
+  padding: 100px;
+  height: 600px;
+}
+.ParentAddress::before {
+  content: "";
+  background-image: url('../Images/AddressBG1.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+   background-size: 750px 700px; 
+   background-size: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0px); /* Adjust the blur radius as needed 
+} */
+
+
+.ChildEdit{
+  /* border: 1px solid black; */
+  width: 28%;
+  margin: auto;
+  margin-top: 30px;
+ padding: 20px;
+ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ margin-bottom: 20px;
+ align-items: center;
+ position: relative;
+  z-index: 100;
+
+}
+.FormLabelInput{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  width: 80%;
+}
+.FormLabelInput input{
+  height: 30px;
+  border-radius:5px ;
+
+}
+.FormLabelInput label{
+  margin-bottom: 10px;
+
+}
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

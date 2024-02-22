@@ -1,0 +1,31 @@
+.ChildOrder {
+  width: 500px;
+  max-width: 600px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.1);
+  background-color: #fff;
+  position: relative;
+  z-index: 100;
+  margin-left: 20px;
+}
+.ParentOrder{
+  position: relative;
+  width: 100%;
+  padding: 100px;
+  height: 600px;
+}
+.ParentOrder::before {
+  content: "";
+  background-image: url('../../Images/OrderBG1.jpeg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0px); /* Adjust the blur radius as needed */
+}
+

@@ -60,9 +60,253 @@
 }
 .sectionHeading{
   text-align: center;
-  margin:20px  0px;
+  margin: auto;
+  margin-top:20px  ;
+  width: 80%;
 }
 .featureBox img{
   width: fit-content;
   height: 85px;
+}
+#sectionBanner{
+  width: 80%;
+  margin-top: 20px;
+  /* border: 1px solid black; */
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+.PlantFoodPoster{
+  background-image: url('../Images/plantsfood.jpg');
+  background-repeat: no-repeat;
+  background-size: 750px 320px;
+  height: 305px;
+  width: 750px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: relative;
+  object-fit: contain;
+}
+.PlantFoodPoster2{
+  background-image: url('../Images/Pebbles.jpg');
+  background-repeat: no-repeat;
+  background-size: 455px 200px;
+  height: 200px;
+  width: 455px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  object-fit: contain;
+}
+.PlantFoodPoster3{
+  background-image: url('../Images/spray_pump_for_1_832x619.png');
+  background-repeat: no-repeat;
+  background-size: 455px 200px;
+  height: 200px;
+  width: 455px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  object-fit: contain;
+}
+.PlantFoodPoster4{
+  background-image: url('../Images/nursery_pots.webp');
+  background-repeat: no-repeat;
+  background-size: 455px 200px;
+  height: 200px;
+  width: 455px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  object-fit: contain;
+}
+.PlantFoodPoster h1{
+  position: absolute;
+  top:26px;
+  left: 25px;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+.PlantFoodPoster p{
+  position: absolute;
+  top:75px;
+  left: 25px;
+  text-align: start;
+  font-size: 20px;
+  width: 50%;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.PlantFoodPoster5 h1{
+  position: absolute;
+  top:26px;
+  right: 25px;
+  transform: scalex(-1);
+  font-size: 30px;
+  font-weight: 900;
+  color: black;
+  text-shadow: 2px 2px white;
+}
+.PlantFoodPoster5 p{
+  position: absolute;
+  top:75px;
+  right: 25px;
+  font-size: 20px;
+  text-align: start;
+  transform: scalex(-1);
+  width: 50%;
+  color: black;
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster2 h1{
+  position: absolute;
+  top:25px;
+  left: 10px;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster2 p{
+  position: absolute;
+  text-align: start;
+  top:65px;
+  left: 10px;
+  font-size: 20px;
+  width: 80%;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster3 h1{
+  position: absolute;
+  top:220px;
+  left: 10px;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster3 p{
+  position: absolute;
+  text-align: start;
+  top:260px;
+  left: 10px;
+  font-size: 20px;
+  width: 80%;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster4 h1{
+  position: absolute;
+  top:420px;
+  left: 10px;
+  font-size: 30px;
+  font-weight: 900;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px white;
+}
+.PlantFoodPoster4 p{
+  position: absolute;
+  text-align: start;
+  top:460px;
+  left: 10px;
+  font-size: 20px;
+  width: 80%;
+  color: rgb(77,77,77);
+  text-shadow: 1px 1px whitesmoke;
+}
+
+#featureCollection{
+margin-top: 50px;
+margin: auto;
+width: 80%;
+text-align: center;
+margin-top:30px ;
+margin-bottom: 30px;
+}
+.featureCollectionChild{
+
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+.PlantCard{
+  height:320px;
+  width: 222px;
+ box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  padding: 20px;
+}
+.PlantCard img{
+  width: 100%;
+  height: 130px;
+}
+.PlantCard h5,h3{
+  color: grey;
+  font-size: 15px;
+}
+.PlantCard h5{
+  text-decoration: line-through;
+}
+.PlantCard h3{
+  color: rgb(77,169,71);
+}
+.PlantCard p{
+  font-size: 14px;
+  height: 70px;
+}
+.ButtonBox{
+  display: flex;
+  justify-content: space-between;
+  margin-top:10px ;
+
+}
+.QuickShop{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  color: rgb(44,188,99);
+  padding: 5px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.CartButton{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  color: black;
+  background-color: rgb(255,171,65);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+}
+.ViewAllButton{
+  margin: auto;
+  background-color: rgb(116,193,20);
+
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  height: 40px;
+  width: 120px;
+}
+.PlantFoodPoster5{
+  background-image: url('../Images/Indoor_554x370.jpg');
+  transform: scalex(-1);
+  background-repeat: no-repeat;
+  background-size: 750px 320px;
+  height: 300px;
+  width: 750px;
+  cursor: pointer;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: relative;
+  object-fit: contain;
 }

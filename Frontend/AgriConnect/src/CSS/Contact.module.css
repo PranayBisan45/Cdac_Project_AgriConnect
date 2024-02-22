@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+} 
+
+#contactPoster{
+ background-image: url('../Images/Contact.jpg');
+ background-repeat: no-repeat;
+ height:400px;
+ width: 80%;
+ background-size: 100% 100%; 
+ margin: auto;
+ margin-top: 20px;
+ border-radius: 10px;
+}
+#contactPoster h1{
+  text-shadow: 3px 3px black;
+  color:white;
+  text-align: center;
+  padding-top: 125px;
+}
+#contactPoster h4{
+  text-shadow: 3px 3px black;
+  color: white;
+  text-align: center;
+   width: 80%;
+   padding-left: 267px;
+   margin-top: 5px;
+   
+}
+#contactPoster {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+#contactPoster h1 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+#contactPoster h4 {
+  font-size: 1.1rem;
+  color: white;
+  margin-top: 10px;
+}
+
+#ContactForm {
+  
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: fit-content;
+  padding: 20px;
+  margin:auto;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+#ContactForm h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+#ContactForm form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#ContactForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+#ContactForm input[type="text"],
+#ContactForm input[type="email"],
+#ContactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+#ContactForm textarea {
+  resize: vertical;
+}
+
+#ContactForm button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#ContactForm button:hover {
+  background-color: #45a049;
+}
+/* Component container */
+.container {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Added background color for clarity */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Added box shadow for depth */
+}
+
+/* Heading */
+.container h2 {
+  margin-bottom: 20px;
+  color: #333; /* Darkened text color for better readability */
+}
+
+/* Form wrapper */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form labels */
+.form-wrapper label {
+  margin-bottom: 10px;
+  color: #555; /* Slightly lighter text color */
+}
+
+/* Form inputs */
+.form-wrapper input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Submit button */
+.form-wrapper button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-wrapper button:hover {
+  background-color: #0056b3;
+}
+
+/* Links section */
+.links {
+  margin-top: 10px;
+}
+
+/* NavLink style */
+.links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Message */
+.message {
+  margin-top: 10px;
+  font-weight: bold;
+}

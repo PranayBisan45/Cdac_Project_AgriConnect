@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
-
+import CustomContextProvider from "./Context/AgriConnectContext.jsx";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <CustomContextProvider>
+        <App />
+      </CustomContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

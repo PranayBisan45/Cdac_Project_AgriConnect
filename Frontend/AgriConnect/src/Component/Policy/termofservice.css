@@ -1,0 +1,34 @@
+.terms-of-service {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.terms-of-service p {
+    margin-bottom: 10px;
+}
+
+.terms-of-service h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.terms-of-service strong {
+    font-weight: bold;
+}
+
+.terms-of-service em {
+    font-style: italic;
+}
+
+.terms-of-service ul {
+    margin-bottom: 10px;
+}
+
+.terms-of-service ul li {
+    margin-left: 20px;
+}

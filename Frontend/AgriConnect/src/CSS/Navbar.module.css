@@ -19,6 +19,8 @@
   left: 0;
   background-color: white;
   margin-bottom: 0px;
+
+  
 }
 #upperSection{
   display: flex;
@@ -26,26 +28,30 @@
   gap: 70px;
 }
 .navImage{
-height: 70px;
-width: 212px;
+height: 130px;
+width: 178px;
+margin-left: 15px;
 }
 .searchDiv{
   margin-bottom: auto;
-  margin-top: auto;
+  margin-top: 20px;
   display: flex;
+  
 }
 .searchInput{
-  height: 45px;
+  height: 50px;
   width: 850px;
   border:none;
   border-radius: 7px 0px 0px 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
+  background-color:white;
+  margin-left: 30px;
 }
 .searchButton{
-  height: 45px;
+  height: 50px;
   width: 50px;
-  background-color: rgb(255,171,65);
+  background-color:rgb(202,216,137);
   border: none;
   border-radius: 0px 7px 7px 0px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -60,7 +66,10 @@ width: 212px;
   cursor: pointer;
   background-color: white;
   margin-left:3px ;
-  font-size: 25px;
+  font-size: 27px;
+  margin-top: 24px;
+  height: 41px;
+  width: 73px;
   
 }
 .user{
@@ -92,7 +101,7 @@ width: 212px;
   display: flex;
   gap:39px;
   padding: 5px;
-  width: 84%;
+  width: 68%;
   margin: auto;
   /* margin-top:10px ; */
 }
@@ -101,8 +110,10 @@ width: 212px;
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
-  /* color:rgb(29,74,14); */
-  color: rgb(116,183,46);
+  color:rgb(29,74,14);
+  /* color:   rgb(242,183,104);; */
+  /* color: rgb(53,86,8); */
+  /* color:rgb(202,216,137); */
 
 }
 .link:hover{
@@ -111,4 +122,8 @@ width: 212px;
 }
 .active{
  color: red;  
+}
+.optionsButton {
+  margin-left: 40px;
+  /* Adjust the value as needed */
 }

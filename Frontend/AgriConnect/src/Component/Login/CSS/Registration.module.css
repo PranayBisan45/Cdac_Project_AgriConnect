@@ -1,0 +1,61 @@
+.LoginContainer{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 550px;
+  border: 1px solid black;
+  margin: auto;
+  /* margin-top: 20px; */
+  align-items: center;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  z-index: 100;
+}
+.formContainer form,.inputLabel{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.inputLabel{
+  gap:5px;
+}
+.inputLabel input,select{
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.formContainer button{
+  height: 40px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(116,193,20);
+  cursor: pointer;
+  margin-top: 20px;
+  width: 400px;
+  height: 50px;
+}
+.ParentReg {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+  padding: 100px;
+}
+
+.ParentReg::before {
+  content: "";
+  background-image: url('../../../Images/RegistrationBG.jpeg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0px); /* Adjust the blur radius as needed */
+}

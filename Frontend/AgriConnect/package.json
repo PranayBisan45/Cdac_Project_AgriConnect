@@ -10,18 +10,28 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "axios": "^1.6.7",
+    "cdbreact": "^1.5.18",
     "framer-motion": "^11.0.3",
     "google-fonts": "^1.0.0",
+    "http-proxy-middleware": "^2.0.6",
+    "multi-range-slider-react": "^2.0.7",
+    "rc-slider": "^10.5.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router": "^6.22.0",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^6.22.0",
+    "react-slider": "^2.0.6",
+    "request": "^2.88.2",
+    "require": "^2.4.20"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

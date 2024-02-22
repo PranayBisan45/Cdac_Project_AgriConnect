@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#ProductDetailParent{
+  width: 80%;
+  margin: auto;
+  /* border:1px solid black; */
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.ProductDetailChild{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  gap:30px;
+  /* border: 1px solid green; */
+  margin-top: 50px;
+}
+.LeftSection{
+  width: 40%;
+  /* border: 1px solid blue; */
+}
+
+.RightSection{
+  width:60%;
+  /* border: 1px solid blue; */
+}
+.Sale{
+  display:flex;
+  gap:20px;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.Sale p{
+  background-color: rgb(77,169,71);
+  color: white;
+  padding: 5px;
+  width: 50px;
+}
+.Saleh2{
+  color: grey;
+  text-decoration: line-through;
+}
+.Rating{
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.QuantityCart{
+  display: flex;
+  gap:30px;
+}
+.Quantity p{
+    margin-top:20px ; 
+    color: grey;
+    margin-bottom: 10px;
+}
+.Quantity button{
+  border: none;
+  height: 55px;
+  width: 60px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: white;
+  cursor: pointer;
+}
+.Cart button{
+  border: none;
+  height: 55px;
+  width: 320px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: white;
+  margin-top: 54px;
+  cursor: pointer;
+}
+.BuyNow{
+  height: 55px;
+  width: 535px;
+  color:black;
+  background-color: rgb(255,171,65);
+  margin-top:20px;
+  border: none;
+  border-radius: 8px;
+  font-family: 600;
+  cursor: pointer;
+}
+.PlantInformation{
+  margin-top: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.Infocontainer{
+  display: flex;
+  gap: 5px;
+}
+.Infocontainer img{
+  height: 25px;
+  width: 35px;
+}
+.Infocontainer p{
+  font-size:15px;
+  text-align: center;
+  color: rgb(160, 156, 156);
+}
+.plantContainer{
+  height: 500px;
+  width: 80%;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+.RightSection h2:nth-child(1){
+  text-align: center;
+  color:green;
+}

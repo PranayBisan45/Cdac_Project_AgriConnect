@@ -1,0 +1,57 @@
+/* Container styling */
+.profile-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Heading styling */
+.profile-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraph styling */
+.profile-info {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* User ID styling */
+.userid {
+    font-weight: bold;
+}
+
+/* Email styling */
+.emailId {
+    font-style: italic;
+}
+
+/* Address styling */
+.address {
+    font-style: italic;
+}
+
+/* Pincode styling */
+.pincode {
+    font-weight: bold;
+}
+
+/* State styling */
+.state {
+    text-transform: uppercase;
+}
+
+/* Gender styling */
+.gender {
+    text-transform: capitalize;
+}
+
+/* WhatsApp Number styling */
+.whatsApp_Number {
+    font-weight: bold;
+}

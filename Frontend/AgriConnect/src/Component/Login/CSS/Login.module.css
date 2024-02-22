@@ -1,0 +1,70 @@
+.ParentLogin {
+  position: relative;
+  width: 100%;
+  height: 900px; /* Adjust height as needed */
+  padding: 100px;
+}
+
+.ParentLogin::before {
+  content: "";
+  background-image: url('../../../Images/LoginBG2.jpeg');
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(0px); /* Adjust the blur radius as needed */
+}
+
+.LoginContainer {
+  position: relative;
+  z-index: 100; /* Ensure the login form is above the blurred background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 420px;
+  height: auto; /* Adjust height as needed */
+  margin:  auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background to the login container */
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+.LoginContainer h1 {
+  margin-top: 5px;
+}
+
+.inputLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputLabel input {
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.formContainer button {
+  height: 40px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  border: none;
+  color: rgb(20,49,23);
+  cursor: pointer;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.Link {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
