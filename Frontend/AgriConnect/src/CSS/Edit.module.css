@@ -1,12 +1,12 @@
-/* .ParentAddress{
+.ParentAddress{
   position: relative;
   width: 100%;
   padding: 100px;
-  height: 600px;
+  /* height: 600px; */
 }
 .ParentAddress::before {
   content: "";
-  background-image: url('../Images/AddressBG1.jpeg');
+  background-image: url('../Images/AddressBG.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
    background-size: 750px 700px; 
@@ -16,49 +16,56 @@
   left: 0;
   right: 0;
   bottom: 0;
-  filter: blur(0px); /* Adjust the blur radius as needed 
-} */
+  filter: blur(0px);
+}
 
 
 .ChildEdit{
-  /* border: 1px solid black; */
+   /* border: 1px solid black; 
+    */
   width: 28%;
   margin: auto;
   margin-top: 30px;
  padding: 20px;
  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ border-radius: 10px;
+ background-color: rgba(255, 255, 255, 0.8); 
  margin-bottom: 20px;
  align-items: center;
  position: relative;
   z-index: 100;
+  /* text-align: center; */
 
 }
 .FormLabelInput{
   display: flex;
   flex-direction: column;
   gap:5px;
-  width: 80%;
+  width: 100%;
 }
 .FormLabelInput input{
-  height: 30px;
+  height: 35px;
   border-radius:5px ;
-
+  margin-bottom: 20px;
 }
 .FormLabelInput label{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
 }
 .button {
   padding: 10px 20px;
-  background-color: #007bff;
+  /* background-color: #007bff; */
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
-  width: 100px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  color: rgb(48,90,54);
+  background-color: white;
 }
 
 .button:hover {
-  background-color: #0056b3;
+  /* background-color: #0056b3; */
 }

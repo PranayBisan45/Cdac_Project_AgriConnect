@@ -25,6 +25,8 @@ BEGIN
     SET NEW.PFID = custom_id;
 END$$
 DELIMITER ;
+select * from plant_food;
+
 
 drop table if exists artificial_plant;
 CREATE TABLE artificial_plant (
@@ -46,7 +48,7 @@ FOR EACH ROW
 BEGIN
     DECLARE custom_id VARCHAR(15);
     -- Generate custom ID based on your logic
-    SET custom_id = CONCAT('PFT', LPAD(NEW.APID, 8, '0'));
+    SET custom_id = CONCAT('AP', LPAD(NEW.APID, 8, '0'));
     SET NEW.APID = custom_id;
 END$$
 DELIMITER ;
@@ -71,7 +73,7 @@ FOR EACH ROW
 BEGIN
     DECLARE custom_id VARCHAR(15);
     -- Generate custom ID based on your logic
-    SET custom_id = CONCAT('PST', LPAD(NEW.PSID, 8, '0'));
+    SET custom_id = CONCAT('PAS', LPAD(NEW.PSID, 8, '0'));
     SET NEW.PSID = custom_id;
 END$$
 DELIMITER ;
@@ -120,7 +122,12 @@ CREATE TABLE consumer (
 
 
 
+
+
+
+
 -- call Generate_custom_user_id_CO('hrishi','nikam','hrishinikam1729@gmail.com','pune','422003','maharashtra','male','9373352724','Hrishi@17294s');
+    -- select * from consumer;
  
 
 drop procedure if exists Generate_custom_user_id_CO;
@@ -152,6 +159,7 @@ end $
 delimiter ;
 
 
+
 drop function if exists Forgot_Password_Check_SEND_OTP;
 delimiter $
 
@@ -169,6 +177,7 @@ end $
 delimiter ;
 
 
+select * from artificial_plant;
 
 
 
@@ -207,6 +216,7 @@ PPO_STOCK_AVAILABILITY INT CHECK (PPO_STOCK_AVAILABILITY IN (0,1)),
 PPOIMAGES JSON);
 
 
+drop trigger if exists Generate_Custom_id_PPO
 DELIMITER $$
 CREATE TRIGGER Generate_Custom_id_PPO
 BEFORE INSERT ON PLASTIC_POTS
@@ -217,6 +227,8 @@ BEGIN
     SET NEW.PPOid = custom_id;
 END$$
 DELIMITER ;
+
+
 
 
 
@@ -303,42 +315,76 @@ insert into TRANSACTION_DETAILS values(T_ID,UID,EMAIL,CNO,CVV,CNAME,EXP_DATE,AMO
 end $
 delimiter ;                     
 
-drop table if exists ORDERS;
-CREATE TABLE ORDERS (
-    ORDERID VARCHAR(255) PRIMARY KEY, 
-    USER_ID VARCHAR(255), 
-    PRODUCTS_ID JSON, 
-    UNITPRICE JSON, 
-    UNITQUANTITY JSON, 
-    SUBTOTAL VARCHAR(255), 
-    ORDER_TIME_DATE DATETIME,
-    FOREIGN KEY (USER_ID) REFERENCES CONSUMER(USERID)
-    ON UPDATE CASCADE
-	ON DELETE CASCADE
+
+
+drop table if exists Orders;
+create table Orders(OrderID varchar(30),UserID varchar(30),OrderTotal varchar(30),DateTimeDetails datetime,token varchar(30));
+
+
+
+drop table if exists ord_prod;
+CREATE TABLE ord_prod (
+    OrderId VARCHAR(30),
+    productID VARCHAR(30),
+    productQuantity VARCHAR(30),
+    total varchar(30)
 );
 
-DELIMITER $$
-CREATE TRIGGER Generate_custom_Order_ID
-BEFORE INSERT ON ORDERS
-FOR EACH ROW
+
+SET GLOBAL event_scheduler = ON;
+
+drop event if exists delete_old_orders;
+CREATE EVENT delete_old_orders
+ON SCHEDULE EVERY 1 MINUTE
+STARTS CURRENT_TIMESTAMP
+DO
+  DELETE FROM your_table
+  WHERE DateTimeDetails < NOW() - INTERVAL 2 DAY;
+
+
+ drop procedure if exists Insert_Order;
+DELIMITER //
+
+CREATE PROCEDURE Insert_Order(
+    IN p_UserID VARCHAR(30),
+    In O_total varchar(30),
+    In token varchar(30)
+)
 BEGIN
-    DECLARE custom_id VARCHAR(25);
-    -- Generate custom ID based on your logic
-    SET custom_id = CONCAT('OID', substring(NEW.USER_ID,2,4));
-    SET NEW.ORDERID = custom_id;
-END$$
+    DECLARE v_OrderID VARCHAR(30);
+    
+    -- Generate OrderID
+    SET v_OrderID = CONCAT('OR', FLOOR(RAND() * 1000));
+    
+    -- Insert into Orders table
+    INSERT INTO Orders VALUES (v_OrderID, p_UserID,O_total, NOW(),token);
+    insert into ord_prod values(v_OrderID,null,null,null);
+	
+    
+END//
+
 DELIMITER ;
 
+drop procedure if exists Order_products;
+Delimiter $$
+create procedure Order_products(OrrId varchar(30),PId varchar(30),TotalPrice varchar(30), PQuant varchar(30))
+Begin
 
+	insert into ord_prod values(OrrId,PId,PQuant,TotalPrice);
 
+END $$
+Delimiter ;
 
+create table tokenOrder(orderid varchar(30),tokenid varchar(30));
 
-
-
-
-
-
-
+DELIMITER $$
+CREATE TRIGGER StoreToken
+BEFORE INSERT ON Orders
+FOR EACH ROW
+BEGIN
+    INSERT INTO tokenOrder VALUES (NEW.orderid, NEW.token);
+END $$
+DELIMITER ;
 
 INSERT INTO PLANTS (PID, PTITLE, PDESCRIPTION, PRATING, PPRICE, PSTOCKAVAILABILITY, PIMAGES) VALUES (
     '1',
@@ -2040,3 +2086,36 @@ INSERT INTO Pump_Spray VALUES (
     '[{"IMG1":"https://www.chhajedgarden.com/cdn/shop/products/IMG_20210301_092404_57x75_crop_center.jpg?v=1618548061"}]',
     '{"Capacity": "500 ml", "Trigger type": "A-13 model"}'
 );
+
+use agri_connect;
+ALTER TABLE plants
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE pot_planters
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE artificial_plant
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE plastic_pots
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE pump_spray
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE seed_bulb
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE pebbles_and_stones
+ADD COLUMN Quantity INT DEFAULT 1;
+
+ALTER TABLE plant_food
+ADD COLUMN Quantity INT DEFAULT 1;
+
+
+
+
+
+
+
+

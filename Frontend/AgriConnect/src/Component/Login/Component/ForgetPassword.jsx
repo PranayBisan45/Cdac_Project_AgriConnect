@@ -48,7 +48,7 @@ const ForgetPassword = () => {
               <input
                 id="mobile"
                 type="number"
-                placeholder="mobile"
+                placeholder="Mobile"
                 onChange={handleChange}
                 name="contact"
               />
@@ -57,12 +57,12 @@ const ForgetPassword = () => {
               <label>User ID:</label>
               <input
                 type="text"
-                placeholder="user Id"
+                placeholder="User ID"
                 onChange={handleChange}
                 name="userid"
               />
             </div>
-            <button>Send OTP</button>
+            <button style={{ color: "rgb(48,90,54)" }}>Send OTP</button>
           </form>
         </div>
       </div>

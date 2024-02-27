@@ -5,7 +5,9 @@ import "./refundpolicy.css";
 const RefundPolicy = () => {
   return (
     <div className="refund-policy">
-      <h1>Refund Policy</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "15px" }}>
+        Refund Policy
+      </h1>
       <p>
         Refund Policy for AgriConnect At AgriConnect, we strive to ensure that
         every customer has a positive shopping experience. In case you encounter

@@ -48,7 +48,9 @@ const NewPassword = () => {
           marginBottom: "30px",
         }}
       >
-        <h2>Update Password</h2>
+        <h2 style={{ color: "rgb(48,90,54)", marginBottom: "20px" }}>
+          Update Password
+        </h2>
         <form
           onSubmit={handleUpdatePassword}
           style={{ display: "flex", flexDirection: "column" }}
@@ -66,6 +68,8 @@ const NewPassword = () => {
                 marginBottom: "10px",
                 padding: "5px",
                 border: "1px solid #ccc",
+                width: "100%",
+                marginTop: "10px",
                 borderRadius: "5px",
               }}
             />
@@ -77,10 +81,12 @@ const NewPassword = () => {
               value={userId}
               onChange={(e) => setUserId(e.target.value)}
               style={{
-                marginBottom: "10px",
+                marginBottom: "30px",
                 padding: "5px",
                 border: "1px solid #ccc",
                 borderRadius: "5px",
+                width: "100%",
+                marginTop: "10px",
               }}
             />
           </label>
@@ -88,12 +94,14 @@ const NewPassword = () => {
             type="submit"
             style={{
               padding: "10px",
-              backgroundColor: "#007bff",
-              color: "#fff",
+              backgroundColor: "rgb(236,172,82)",
+              color: "rgb(48,90,54)",
               border: "none",
               borderRadius: "5px",
               cursor: "pointer",
               transition: "background-color 0.3s ease",
+              boxshadow:
+                "rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;",
             }}
           >
             Update Password

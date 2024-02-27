@@ -97,7 +97,7 @@ const Footer = () => {
         >
           Follow Us
         </h1>
-        <Stack>
+        <Stack marginBottom={"150px"} marginLeft={"70px"}>
           <HStack width={"50%"}>
             <a
               href="https://www.instagram.com/agriconnect20?igsh=MTRrc2JweGFlNmJ0bg=="
@@ -130,17 +130,17 @@ const Footer = () => {
             </a>
           </HStack>
           <Spacer />
-          <Text
-            as={"strong"}
-            fontSize={"14"}
-            fontWeight={700}
-            lineHeight={"21px"}
-            mb={"15"}
-            color={"black"}
-          >
-            AgriConnect © 2024. All Rights Reserved
-          </Text>
         </Stack>
+        <Text
+          as={"strong"}
+          fontSize={"14"}
+          fontWeight={700}
+          lineHeight={"21px"}
+          mb={"15"}
+          color={"black"}
+        >
+          AgriConnect © 2024. All Rights Reserved
+        </Text>
       </section>
     </footer>
   );

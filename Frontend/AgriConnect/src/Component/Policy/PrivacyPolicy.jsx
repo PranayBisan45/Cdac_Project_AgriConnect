@@ -5,6 +5,9 @@ import "./Privacypolicy.css";
 function PrivacyPolicy() {
   return (
     <div className="privacy-policy">
+      <h1 style={{ textAlign: "center", marginBottom: "15px" }}>
+        Privacy Policy
+      </h1>
       <p>
         <strong>Privacy Policy for AgriConnect:</strong> At AgriConnect, we are
         committed to protecting your privacy and ensuring that your personal

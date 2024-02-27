@@ -5,7 +5,9 @@ import "./termofservice.css";
 const TermsOfService = () => {
   return (
     <div className="terms-of-service">
-      <h1>Terms of Service</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "15px" }}>
+        Terms Of Service
+      </h1>
       <p>
         Welcome to AgriConnect! These terms and conditions outline the rules and
         regulations for the use of our website, located at www.agriconnect.com.

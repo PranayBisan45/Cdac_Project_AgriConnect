@@ -5,7 +5,9 @@ import "./shippingpolicy.css";
 const ShippingPolicy = () => {
   return (
     <div className="shipping-policy">
-      <h1>Shipping Policy</h1>
+      <h1 style={{ textAlign: "center", marginBottom: "15px" }}>
+        Shipping Policy
+      </h1>
       <p>
         At AgriConnect, we are committed to providing you with the best shipping
         options possible. We aim to ensure that you receive your order promptly

@@ -71,7 +71,9 @@ const EditAddress = () => {
   return (
     <div className={style.ParentAddress}>
       <div className={style.ChildEdit}>
-        <h1 style={{ marginBottom: "10px" }}>Addresss Page</h1>
+        <h1 style={{ marginBottom: "10px", color: " rgb(48,90,54)" }}>
+          Addresss Page
+        </h1>
         <form onSubmit={handleSubmit}>
           <div className={style.FormLabelInput}>
             <label>Address:</label>
@@ -107,7 +109,11 @@ const EditAddress = () => {
             />
           </div>
 
-          {editable && <button type="submit">Submit</button>}
+          {editable && (
+            <button className={style.button} type="submit">
+              Submit
+            </button>
+          )}
         </form>
         <div>
           <button className={style.button} onClick={() => setEditable(true)}>
