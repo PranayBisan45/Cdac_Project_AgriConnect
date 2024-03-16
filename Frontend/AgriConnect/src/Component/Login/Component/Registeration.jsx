@@ -166,13 +166,13 @@ const Registration = () => {
             </select>
           </div>
           <div className={style.inputLabel}>
-            <label for="whatappnumber">Whatappnumber:</label>
+            <label for="WhatsAppNumber">WhatsAppNumber:</label>
             <input
               name="WhatsApp_Number"
               value={formData.WhatsApp_Number}
               onChange={handleChange}
               type="number"
-              id="whatappnumber"
+              id="WhatsAppNumber"
               required
               pattern="^[6-9]\d{9}$"
               title="Please enter a valid indian mobile number"
