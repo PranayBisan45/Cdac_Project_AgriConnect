@@ -1,13 +1,13 @@
 # Cdac_Project_AgriConnect 
 <br>
 
-FRONTEND:  HTML5, CSS3, ES6, BootStrap, REACT JS, Redux, ChakraUI
+FRONTEND:  HTML5, CSS3, BootStrap, REACT JS
 <br>
-BACKEND:   SpringBoot, ASP.NET Web API, Entity FrameWork
+BACKEND:   Java, SpringBoot, JDBC Template
 <br>
 DATABASE:  MySQL
 <br>
 
-Our project aims to develop an application that provides a platform for farmers to navigate and find agricultural products and farming equipment. The application will help farmers save costs by allowing them to compare products and navigate them to the respective shops. It will not be an e-commerce website, but rather a tool that connects farmers with local shops and service providers, ensuring accurate and up-to-date information on product availability and prices. In addition, we plan to include a subservice in the application for non-farmers to purchase nursery plants and components. This will expand the application's utility to a wider audience, allowing non-farmers to access and purchase nursery plants and related components conveniently.
+The project aims to develop an e-commerce website, AgriConnect, to provide a convenient and comprehensive solution for purchasing nursery plants and related products. AgriConnect will offer a user-friendly platform for customers to browse, select, and purchase a wide range of nursery plants, gardening tools, and accessories. The website will focus on simplifying the buying process, offering detailed product descriptions, and providing a seamless shopping experience. Additionally, AgriConnect will ensure accurate product information and competitive pricing. The platform will cater to both gardening enthusiasts and professional landscapers, offering a diverse selection of high-quality products and expert guidance to meet their specific needs.
 <br>
 
